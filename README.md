@@ -37,6 +37,37 @@ For example: gelmek -> gel, almak -> al
 I have used [Éva Á. Csató & David Nathan's site](http://www.dnathan.com/language/turkish/tsd/) to find all suffixes. #TO-DO# Then program checks if remaining part of the word generates valid suffixes within this list.
 
 
+## 4. How to Run
+First, run trainLexicon.py file to gather your lexicon with zargan and adapt changes in Section 2.
+```
+python3 trainLexicon.py
+```
+After this command, the code uses zargan.pkl file in Dataset by default to create modified lexicon by steps in Section 2. revisedDict.pkl file will be created after this step.
+
+Then you can check any words lemma by running lemmatizer.py file. It uses revisedDict.pkl file and checker in Section 3. Word should be given as argument. Output would be possible lemmas sorted by its possibilities. You can see examples below.
+```
+python3 lemmatizer.py ağacı
+```
+
+Input is "his/her tree". Output would be:
+```
+Possible lemmas for ağacı in ranked order:
+ağaç_1
+ağa_1
+ağ_1
+a_1
+```
+The most possible lemma for "ağacı" is ağaç as expected.
+These are several examples:
+
+gözlükçüler(opticians) -> gözlükçü(optician)
+
+gözlüğü(his/her glasses) -> gözlük(glasses)
+
+Optician and glass have same stem in Turkish which is eye however our lemmatizer finds their lemmas not their stems.
+
+
+
 ## References
 1. Bilgin, O. (2016). Frequency Effects in the Processing of Morphologically Complex Turkish Words (Unpublished master’s thesis). Bogaziçi University, Istanbul, Turkey. Retrieved from http://st2.zargan.com/public/resources/turkish/frequency_effects_in_turkish.pdf
 2. http://www.dnathan.com/language/turkish/tsd/
