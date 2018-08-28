@@ -8,7 +8,7 @@ The main alternative is from [Zargan Dictionary](http://st2.zargan.com/duyuru/Za
 
 The other alternative is Wiktionary database. You can download from [this link](https://dumps.wikimedia.org/trwiktionary/20180201/). However there are words with inflectional suffixes in wiktionary so it wouldn't help us too much.
 
-## 2.Handling Inflextional Suffixes Which Changes Lemma(Ablauts)
+## 2.Handling Inflectional Suffixes Which Changes Lemma(Ablauts)
 There are three different ablauts which change structure of lemmas. We generate new words based on these changes. These changes are creating negative verbs(not ablaut), softening of consonants, becoming close(narrow) vowel, dropping a vowel, and zero infinitive(not ablaut).
 
 ### 2.1.Creating Negative Verbs
